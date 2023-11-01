@@ -17,8 +17,14 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger('flight_id'); 
+            $table->unsignedBigInteger('car_id'); 
+            $table->unsignedBigInteger('hotel_id');   
             $table->rememberToken();
             $table->timestamps();
+            $table->foreign('flight_id')->references('id')->on('flights');
+            $table->foreign('car_id')->references('id')->on('cars');
+            $table->foreign('hotel_id')->references('id')->on('hotels');
         });
     }
 
