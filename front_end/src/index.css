@@ -43,7 +43,6 @@ code {
   align-items: space-around;
   text-align: center; 
   flex-direction: column;
-  /* background-color: aliceblue; */
   width: 40%;
 }
 
@@ -53,7 +52,6 @@ h1 {
 }
 
 .input_container {
-  /* margin-top: 5%; */
   margin-bottom: 3%;
 }
 
@@ -90,4 +88,8 @@ h1 {
 
 .register_link a:hover{
   color: red;
+}
+
+.btn_push {
+  margin-top: 130px;
 }

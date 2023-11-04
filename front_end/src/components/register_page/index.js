@@ -1,9 +1,8 @@
 import { useState } from "react";
-import "./style.css"
 
 const RegisterPage = () => {
 
-    const [name, setName] = useState("hsien");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeat_password, setRepeat_password] = useState("");
@@ -58,8 +57,8 @@ const RegisterPage = () => {
                             onChange={(e) => setRepeat_password(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn_container input-container" id="btn-container">Register</button>
-                    <div className="register_link input-container">
+                    <button type="submit" className="btn_container " id="btn-container">Register</button>
+                    <div className="register_link ">
                          <a href="/login">Already have an account?</a>
                     </div>
                 </form>
