@@ -46,8 +46,12 @@ code {
   width: 40%;
 }
 
+.logo img {
+  width: 200px;
+  margin-bottom: 40px;
+}
 h1 {
-  padding-bottom: 60px;
+  padding-bottom: 6%;
   font-size: x-large;
 }
 
@@ -76,10 +80,15 @@ h1 {
   background-color: var(--blue);
   margin-top: 4%;
   margin-bottom: 2%;
+  cursor: pointer;
 }
 
 .btn_container:hover {
   background-color: var(--dark_blue);
+}
+
+.btn_push {
+  margin-top: 140px;
 }
 
 .register_link a{
@@ -90,6 +99,3 @@ h1 {
   color: red;
 }
 
-.btn_push {
-  margin-top: 130px;
-}
