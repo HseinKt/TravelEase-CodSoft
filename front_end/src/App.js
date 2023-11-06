@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import LoginPage from "./components/login_page";
 import RegisterPage from "./components/register_page";
-import Header from "./components/header";
+import MainPage from "./components/main_page";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/login" element={ <LoginPage/> } />
         <Route path="/register" element={ <RegisterPage/> } />
-        {/* <Route path="/" element={ <Header/> } /> */}
+        <Route path="/" element={ <MainPage/> } />
 
       </Routes>
     </>

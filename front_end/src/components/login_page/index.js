@@ -40,7 +40,7 @@ const LoginPage = () => {
                     </div>
                     <button type="submit" className="btn_container btn_push" id="btn-container">Sign In</button>
                     <div className="register_link ">
-                         <a href="/login">Not registered? Register as a new User</a>
+                         <a href="/register">Not registered? Register as a new User</a>
                     </div>
                 </form>
             </div>
