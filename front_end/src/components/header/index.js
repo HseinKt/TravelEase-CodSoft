@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import logo from '../images/logo.png'
+import DropDown from '../dropdown';
 
 const Header = () => {
-    
     const navigate = useNavigate();
     const handleChange = () => {
         navigate('/');
@@ -13,10 +13,10 @@ const Header = () => {
             <div className="logo">
                 <img src={logo} alt="logo" onClick={handleChange}/>
             </div> 
-            <div className='menu_signin'>
-                <div className="menu_travel">
-                    More travel
-                </div>
+            <div className='dropdown_signin'>
+
+                <DropDown />
+
                 <div className="sign_in" onClick={() => navigate("/login")}>
                     Sign In
                 </div>
