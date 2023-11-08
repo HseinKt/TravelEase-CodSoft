@@ -11,7 +11,7 @@ const DropDown = (props) => {
         <div className="dropdown">
 
             <div className="dropdown-trigger" onClick={toggleDropdown}>
-                Click me
+                {props.clicked}
                 <span className={`arrow ${isOpen ? 'up' : 'down'}`}></span>
             </div>
 
