@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const DropDown = () => {
+const DropDown = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleDropdown = () => {
@@ -17,9 +17,9 @@ const DropDown = () => {
 
             {isOpen && (
                 <ul className="dropdown-list">
-                    <li>FLIGHTS</li>
-                    <li>HOTELS</li>
-                    <li>CAR HIRE</li>
+                    <li>{props.item1}</li>
+                    <li>{props.item2}</li>
+                    <li>{props.item3}</li>
                 </ul>
             )}
         </div>

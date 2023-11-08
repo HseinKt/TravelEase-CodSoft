@@ -15,7 +15,7 @@ const Header = () => {
             </div> 
             <div className='dropdown_signin'>
 
-                <DropDown />
+                <DropDown item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'}/>
 
                 <div className="sign_in" onClick={() => navigate("/login")}>
                     Sign In
