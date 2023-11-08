@@ -5,7 +5,7 @@ const MainPage = () => {
     return ( 
         <>
             <Header />
-            <NavBar />
+            <NavBar item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'}/>
         </>
      );
 }

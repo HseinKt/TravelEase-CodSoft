@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const [selectedItem, setSelectedItem] = useState(null);
 
@@ -16,28 +16,28 @@ const NavBar = () => {
                     <NavLink
                         exact
                         to=""
-                        className={selectedItem === "flights" ? "selected" : ""}
-                        onClick={() => handleItemClick("flights")}
+                        className={` ${ selectedItem === props.item1 ? "selected" : ""}`}
+                        onClick={() => handleItemClick(`${props.item1}`)}
                     >
-                        FLIGHTS
+                        {props.item1}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
                         to=""
-                        className={selectedItem === "hotels" ? "selected" : ""}
-                        onClick={() => handleItemClick("hotels")}
+                        className={`${selectedItem === props.item2 ? "selected" : ""}`}
+                        onClick={() => handleItemClick(props.item2)}
                     >
-                        HOTELS
+                        {props.item2}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
                         to=""
-                        className={selectedItem === "car-hire" ? "selected" : ""}
-                        onClick={() => handleItemClick("car-hire")}
+                        className={`${selectedItem === props.item3 ? "selected" : ""}`}
+                        onClick={() => handleItemClick(props.item3)}
                     >
-                        CAR HIRE
+                        {props.item3}
                     </NavLink>
                 </li>
             </ul>
