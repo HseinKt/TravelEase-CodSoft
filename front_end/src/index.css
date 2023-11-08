@@ -246,7 +246,7 @@ a{
   margin-top: 4%;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
-  width: 250px;
+  width: 340px;
 }
 
 .multi-choice .nav {
@@ -262,4 +262,8 @@ a{
   font-weight: 400;
   font-size: var(--font-size-smaller);
   margin-left: 10px;
+}
+
+.multi-choice .nav-bar .nav li {
+  padding-right: 40px;
 }
