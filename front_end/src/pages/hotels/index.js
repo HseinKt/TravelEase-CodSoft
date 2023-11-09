@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
+import DateTime from "../../components/date_time";
 
 const Hotels = () => {
     const [formData, setFormData] = useState({
@@ -19,6 +20,8 @@ const Hotels = () => {
         });
     };
 
+    console.log("date: " + formData.mdepartureTime)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // You can submit the form data to the server or perform other actions here
@@ -30,26 +33,9 @@ const Hotels = () => {
             <form onSubmit={handleSubmit} className="hotel-booking-form">
                 <SearchInput />
 
-                <div>
-                    <label htmlFor="departureTime">Departure Time</label>
-                    <input
-                        type="datetime-local"
-                        id="departureTime"
-                        name="departureTime"
-                        value={formData.departureTime}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="arrivalTime">Arrival Time</label>
-                    <input
-                        type="datetime-local"
-                        id="arrivalTime"
-                        name="arrivalTime"
-                        value={formData.arrivalTime}
-                        onChange={handleChange}
-                    />
-                </div>
+                <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
+                <DateTime id={"arrivalTime"} label={"Arrival Time"} value={formData.arrivalTime} handleChange={handleChange}/>
+
                 <div>
                     <label htmlFor="adults">Adults</label>
                     <input
