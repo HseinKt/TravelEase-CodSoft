@@ -9,8 +9,8 @@ const RegisterPage = () => {
     const [repeat_password, setRepeat_password] = useState("");
     const Email_pattern=/[a-z0-9]+@[a-z0-9.-]+\.[a-z]{3,}$/;
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     return ( 
