@@ -311,7 +311,7 @@ a{
 }
 
 /* datetime style */
-.date {
+.date, .number-input  {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -333,3 +333,13 @@ label {
   box-sizing: border-box;
 }
 
+/* Number Input */
+.number-input input {
+  border-radius: 8px;
+  width: 100px;
+  padding: 12.3px;
+  border: 1px solid #575757;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}

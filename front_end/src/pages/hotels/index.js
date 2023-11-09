@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
-import DateTime from "../../components/date_time";
+import DateTime from "../../components/date_time_input";
+import NumberInput from "../../components/number-input";
 
 const Hotels = () => {
     const [formData, setFormData] = useState({
@@ -35,28 +36,11 @@ const Hotels = () => {
 
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                 <DateTime id={"arrivalTime"} label={"Arrival Time"} value={formData.arrivalTime} handleChange={handleChange}/>
-
-                <div>
-                    <label htmlFor="adults">Adults</label>
-                    <input
-                        type="number"
-                        id="adults"
-                        name="adults"
-                        value={formData.adults}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="children">Children</label>
-                    <input
-                        type="number"
-                        id="children"
-                        name="children"
-                        value={formData.children}
-                        onChange={handleChange}
-                    />
-                </div>
-                <button type="submit">Book Now</button>
+                
+                <NumberInput id={"adults"} label={"Adults"} value={formData.adults} handleChange={handleChange}/>
+                <NumberInput id={"children"} label={"Children"} value={formData.children} handleChange={handleChange}/>
+                
+                <button type="submit" className="btn">Book Now</button>
             </form>
         </div>
     );
