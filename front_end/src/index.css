@@ -343,3 +343,22 @@ label {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
+
+/* button */
+.btn {
+  color: white;
+  background-color: var(--blue);
+  margin-top: 20px;
+  padding: 12px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  font-size: var(--font-size-small);
+  height: 40%;
+  font-weight: var(--font-weight-mediun);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark_blue);
+}

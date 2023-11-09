@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
-import NumberInput from "../../components/number-input";
+import NumberInput from "../../components/number_input";
 
 const Hotels = () => {
     const [formData, setFormData] = useState({
@@ -35,12 +35,14 @@ const Hotels = () => {
                 <SearchInput />
 
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
+                
                 <DateTime id={"arrivalTime"} label={"Arrival Time"} value={formData.arrivalTime} handleChange={handleChange}/>
                 
                 <NumberInput id={"adults"} label={"Adults"} value={formData.adults} handleChange={handleChange}/>
+
                 <NumberInput id={"children"} label={"Children"} value={formData.children} handleChange={handleChange}/>
                 
-                <button type="submit" className="btn">Book Now</button>
+                <button type="submit" className="btn">Search</button>
             </form>
         </div>
     );
