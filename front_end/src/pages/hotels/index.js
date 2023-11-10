@@ -32,7 +32,7 @@ const Hotels = () => {
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
-                <SearchInput />
+                <SearchInput id={"departurePlace"} placeholder={"Going to"}/>
 
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SearchInput = () => {
+const SearchInput = (props) => {
 
     const [departurePlace, setDeparturePlace] = useState('');
     const [showSearchBox, setShowSearchBox] = useState(false);
@@ -21,9 +21,9 @@ const SearchInput = () => {
       <div className="input-container">
         <input
           type="text"
-          id="departurePlace"
-          name="departurePlace"
-          placeholder="Going to"
+          id={props.id}
+          name={props.id}
+          placeholder={props.placeholder}
           className="input_departurePlace"
           value={departurePlace}
           onChange={(e) => setDeparturePlace(e.target.value)}
