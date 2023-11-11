@@ -21,7 +21,7 @@ const Hotels = () => {
         });
     };
 
-    console.log("date: " + formData.mdepartureTime)
+    console.log("date: " + formData.departureTime)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,7 +32,7 @@ const Hotels = () => {
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
-                <SearchInput id={"departurePlace"} placeholder={"Going to"}/>
+                <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace"/>
 
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                 

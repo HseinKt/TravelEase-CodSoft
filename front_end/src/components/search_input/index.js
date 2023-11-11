@@ -2,18 +2,21 @@ import React, { useState } from "react";
 
 const SearchInput = (props) => {
 
-    const [departurePlace, setDeparturePlace] = useState('');
     const [showSearchBox, setShowSearchBox] = useState(false);
 
     const handleInputClick = () => {
-        // Toggle the visibility of the search box
-        setShowSearchBox(!showSearchBox);
+      setShowSearchBox(!showSearchBox);
     };
 
     const handleSelectOption = (selectedOption) => {
-        setDeparturePlace(selectedOption);
-        // Hide the search box after selecting an option
-        setShowSearchBox(false);
+      props.handleChange({
+        target: {
+          name: props.fieldName,
+          value: selectedOption,
+        },
+      });
+      // Hide the search box after selecting an option
+      setShowSearchBox(false);
     };
 
   return (
@@ -25,8 +28,7 @@ const SearchInput = (props) => {
           name={props.id}
           placeholder={props.placeholder}
           className="input_departurePlace"
-          value={departurePlace}
-          onChange={(e) => setDeparturePlace(e.target.value)}
+          value={props.value}
           onClick={handleInputClick}
         />
       </div>

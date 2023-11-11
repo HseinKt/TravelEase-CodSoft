@@ -293,12 +293,14 @@ a{
 
 .search-box {
   display: flex;
+  position: absolute;
   flex-direction: column;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   margin-bottom: 5%;
+  width: 200px;
 }
 
 .search-option {
