@@ -7,6 +7,11 @@ const NavBar = (props) => {
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
+        console.log("Clicked in NavBar:", item);
+        
+        if (props.handleClick) {
+            props.handleClick(item);
+        }
     };
 
     return ( 
