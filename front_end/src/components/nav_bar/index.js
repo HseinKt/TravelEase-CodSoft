@@ -14,7 +14,7 @@ const NavBar = (props) => {
             <ul className="nav">
                 <li>
                     <NavLink
-                        exact
+                        // exact
                         to=""
                         className={` ${ selectedItem === props.item1 ? "selected" : ""}`}
                         onClick={() => handleItemClick(`${props.item1}`)}
