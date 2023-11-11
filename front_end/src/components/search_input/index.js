@@ -38,6 +38,12 @@ const SearchInput = (props) => {
           {/* Assume search results are fetched from an API */}
           <div
             className="search-option"
+            onClick={() => handleSelectOption("")}
+          >
+            <span className="nothing" >{props.placeholder}</span>
+          </div>
+          <div
+            className="search-option"
             onClick={() => handleSelectOption("Option 1")}
           >
             Option 1

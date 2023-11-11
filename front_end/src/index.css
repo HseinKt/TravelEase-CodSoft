@@ -314,6 +314,10 @@ a{
   background-color: #f0f0f0;
 }
 
+.nothing {
+  font-weight: 100;
+  color: #8a8a8a;
+}
 /* datetime style */
 .date, .number-input  {
   display: flex;
@@ -365,4 +369,20 @@ label {
 
 .btn:hover {
   background-color: var(--dark_blue);
+}
+
+/* Multi City */
+.section_multi_city {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.section .btn {
+  padding-bottom: 30px;
 }
