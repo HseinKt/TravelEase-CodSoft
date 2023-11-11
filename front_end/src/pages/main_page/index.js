@@ -10,7 +10,12 @@ const MainPage = () => {
             <Header />
             <NavBar item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'}/>
             {/* <Hotels /> */}
-            <CarHire />
+            {/* <CarHire /> */}
+            <Flights />
+
+            {/* const receiver_id = localStorage.getItem('user_id');
+                localStorage.setItem('token', response.data.authorisation.token);*/}
+
         </>
      );
 }

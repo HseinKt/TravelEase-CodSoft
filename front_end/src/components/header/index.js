@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import logo from '../images/logo.png'
-import DropDown from '../dropdown';
+import ClickMe from '../dropdown/click_me';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Header = () => {
             </div> 
             <div className='dropdown_signin'>
 
-                <DropDown item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'} clicked={'click me'}/>
+                <ClickMe item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'} clicked={'click me'}/>
 
                 <div className="sign_in" onClick={() => navigate("/login")}>
                     Sign In
