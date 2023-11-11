@@ -21,7 +21,7 @@ const Flights = () => {
             case 'Multi-city':
                 return <MultiCity />;
             default:
-                return null;
+                return <RoundTrip />;
         }
     }
     return ( 
