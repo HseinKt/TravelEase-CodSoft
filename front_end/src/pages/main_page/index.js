@@ -27,7 +27,8 @@ const MainPage = () => {
     }
     return ( 
         <>
-            <Header />
+            <Header item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'} handleClick={handleClick}/>
+
             <NavBar item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'} handleClick={handleClick}/>
 
             {renderSelectedComponent()}
