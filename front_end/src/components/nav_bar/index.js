@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
 
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(props.item1);
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
@@ -19,7 +19,6 @@ const NavBar = (props) => {
             <ul className="nav">
                 <li>
                     <NavLink
-                        // exact
                         to=""
                         className={` ${ selectedItem === props.item1 ? "selected" : ""}`}
                         onClick={() => handleItemClick(`${props.item1}`)}
