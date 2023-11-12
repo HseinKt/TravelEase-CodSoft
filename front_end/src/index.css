@@ -56,6 +56,19 @@ code {
   width: 200px;
   margin-bottom: 40px;
 }
+
+.logo img:hover {
+  animation: vibrate 0.5s infinite;
+}
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px) rotate(-1deg); }
+  40% { transform: translateX(5px) rotate(1deg); }
+  60% { transform: translateX(-5px) rotate(-1deg); }
+  80% { transform: translateX(5px) rotate(1deg); }
+  100% { transform: translateX(0); }
+}
+
 h1 {
   padding-bottom: 6%;
   font-size: x-large;
@@ -242,6 +255,7 @@ a{
 .multi-choice {
   display: flex;
   padding-top: 30px;
+  flex-wrap: wrap;
 }
 .multi-choice .nav-bar{
   margin-top: 4%;
@@ -253,6 +267,7 @@ a{
 .multi-choice .nav {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .multi-choice .dropdown{
@@ -381,8 +396,10 @@ label {
 .section {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .section .btn {
   padding-bottom: 30px;
 }
+
