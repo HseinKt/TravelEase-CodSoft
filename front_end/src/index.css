@@ -49,7 +49,7 @@ code {
   align-items: space-around;
   text-align: center; 
   flex-direction: column;
-  width: 40%;
+  width: 400px;
 }
 
 .logo img {
@@ -139,6 +139,10 @@ h1 {
   padding-top: 50px;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-mediun);
+}
+
+.header_container .dropdown_signin .dropdown{
+  display: none;
 }
 
 .header_container .dropdown_signin .dropdown .dropdown-trigger:hover,
@@ -403,3 +407,39 @@ label {
   padding-bottom: 30px;
 }
 
+@media only screen and (max-width:500px) {
+  body {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .logo img {
+    width: 110px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .header_container .dropdown_signin .dropdown{
+    display: block;
+  }
+  .header_container .dropdown_signin {
+    font-size: var(--font-size-small);
+  }
+  .multi-choice .nav li{
+    font-size: var(--font-size-smaller);
+    margin-right: 0;
+  }
+  .multi-choice .nav-bar{
+    width: 280px;
+  }
+  .nav-bar .nav li {
+    font-size: var(--font-size-smaller);
+  }
+  .hotel-booking-form {
+    padding-left: 10px;
+  }
+  .register_link a {
+    font-size: var(--font-size-smaller);
+  }
+  .lgn_container h1 {
+    font-size: var(--font-size-medium)
+  }
+}
