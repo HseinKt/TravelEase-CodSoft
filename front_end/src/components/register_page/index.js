@@ -11,6 +11,22 @@ const RegisterPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(name == "" || email == "" || password == "" || repeat_password == "") {
+            alert("Please make sure you have field all the required fields");
+            return;
+        }
+        else if (!Email_pattern.test(email)) {
+            alert("Please enter a valid email");
+            return;
+        }
+        else if(password.length < 6) {
+            alert(" Password must be at least 6 characters");
+            return;
+        }
+        else if(password !== repeat_password) {
+            alert('Please make sure to repeat the same password');
+            return;
+        }   
     }
 
     return ( 
@@ -43,7 +59,7 @@ const RegisterPage = () => {
                     </div>
                     <div className="input_container">
                         <input 
-                            type="text" 
+                            type="password" 
                             id="password"
                             className="input"
                             placeholder="Password"
@@ -53,7 +69,7 @@ const RegisterPage = () => {
                     </div>
                     <div className="input_container">
                         <input 
-                            type="text" 
+                            type="password" 
                             id="rePassword"
                             className="input"
                             placeholder="Retype your password"
