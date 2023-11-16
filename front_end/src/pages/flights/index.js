@@ -6,6 +6,7 @@ import RoundTrip from "../../components/round_trip";
 
 const Flights = () => {
     const [selectedItem, setSelectedItem] = useState(null);
+    const [flightData, setFlightData] = useState(null);
 
     const handleClick = (item) => {
         setSelectedItem(item); 
