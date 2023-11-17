@@ -11,7 +11,7 @@ const LoginPage = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(email == "" || password == "") {
+        if(email === "" || password === "") {
             alert("Please make sure you have field all the required fields");
             return;
         }
@@ -32,6 +32,7 @@ const LoginPage = () => {
             axios.post("http://localhost:8000/api/v0.0.1/login", formData)
             .then(response => {
                 console.log(response.data.authorization.token);
+                localStorage.setItem("token", response.data.authorization.token);
                 navigate("/");
             })
             .catch(error => {

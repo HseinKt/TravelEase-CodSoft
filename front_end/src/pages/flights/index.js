@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultiChoice from "../../components/multi_choice";
 import MultiCity from "../../components/multi_city";
 import OneWay from "../../components/one_way";
 import RoundTrip from "../../components/round_trip";
+import { fetchFlightData } from "./flightService";
 
 const Flights = () => {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -13,16 +14,25 @@ const Flights = () => {
         console.log("flight Item:", item);
     }
 
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     console.log("flight token : "+token);
+
+    //     fetchFlightData(token)
+    //     .then(data => setFlightData(data))
+    //     .catch(error => console.error('Error fetching flight data 2 :', error));
+    // }, [selectedItem]);
+
     const renderSelectedComponent = () => {
         switch (selectedItem) {
             case 'RoundTrip':
-                return <RoundTrip />;
+                return <RoundTrip flightData={flightData}/>;
             case 'One-Way':
-                return <OneWay />;
+                return <OneWay flightData={flightData}/>;
             case 'Multi-city':
-                return <MultiCity />;
+                return <MultiCity flightData={flightData}/>;
             default:
-                return <RoundTrip />;
+                return <RoundTrip flightData={flightData}/>;
         }
     }
     return ( 

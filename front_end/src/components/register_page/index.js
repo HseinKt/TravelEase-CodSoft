@@ -14,7 +14,7 @@ const RegisterPage = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(name == "" || email == "" || password == "" || repeat_password == "") {
+        if(name === "" || email === "" || password === "" || repeat_password === "") {
             alert("Please make sure you have field all the required fields");
             return;
         }
