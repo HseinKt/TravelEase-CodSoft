@@ -3,7 +3,7 @@ import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
 
-const MultiCity = () => {
+const MultiCity = (props) => {
     const [formData, setFormData] = useState({
         departurePlace: "",
         arrivalPlace: "",
@@ -31,6 +31,9 @@ const MultiCity = () => {
         console.log(formData);
     };
 
+    const departureAirports = props.flightData?.flights?.map((flight) => flight.departure_airport) || [];
+    const arrivalAirports = props.flightData?.flights?.map((flight) => flight.arrival_airport) || [];
+
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
@@ -42,17 +45,17 @@ const MultiCity = () => {
                     </div>
                     
                     <div className="section">
-                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace"/>
+                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
                     
-                        <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace"/>
+                        <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace" option={arrivalAirports}/>
 
                         <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>                
                     </div>
                     
                     <div className="section">
-                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace2} handleChange={handleChange} fieldName="arrivalPlace2"/>
+                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace2} handleChange={handleChange} fieldName="arrivalPlace2" option={departureAirports}/>
                     
-                        <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace2} handleChange={handleChange} fieldName="departurePlace2"/>
+                        <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace2} handleChange={handleChange} fieldName="departurePlace2" option={arrivalAirports}/>
 
                         <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime2} handleChange={handleChange}/>                
                     </div>
