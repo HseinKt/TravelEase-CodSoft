@@ -443,3 +443,11 @@ label {
     font-size: var(--font-size-medium)
   }
 }
+
+/* Image */
+.Image {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 90px;
+  margin-top: 20px;
+}

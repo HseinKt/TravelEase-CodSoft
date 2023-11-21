@@ -14,14 +14,20 @@ const Flights = () => {
         console.log("flight Item:", item);
     }
 
-    // useEffect(() => {
-    //     const token = localStorage.getItem("token");
-    //     console.log("flight token : "+token);
+    useEffect(() => {
+        // const token = localStorage.getItem("token");
+        // console.log("flight token : "+token);
 
-    //     fetchFlightData(token)
-    //     .then(data => setFlightData(data))
-    //     .catch(error => console.error('Error fetching flight data 2 :', error));
-    // }, [selectedItem]);
+        fetchFlightData()
+        .then(data => {
+            console.log("data hsein:  ",data);
+            setFlightData(data);
+            // console.log("flightData:  ",flightData);
+        }) 
+        .catch(error => console.error('Error fetching flight data 2 :', error));
+    }, [selectedItem]);
+
+    // fetch('https://jsonplaceholder.typicode.com/users/1')
 
     const renderSelectedComponent = () => {
         switch (selectedItem) {
@@ -32,6 +38,7 @@ const Flights = () => {
             case 'Multi-city':
                 return <MultiCity flightData={flightData}/>;
             default:
+                console.log("flightData after:  ",flightData);
                 return <RoundTrip flightData={flightData}/>;
         }
     }

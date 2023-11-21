@@ -42,7 +42,14 @@ const SearchInput = (props) => {
           >
             <span className="nothing" >{props.placeholder}</span>
           </div>
-          <div
+          {!!props.option && props.option
+            .map((option, i) =>{
+              return <div key={i} className="search-option" onClick={() => handleSelectOption(option)}>
+                {option}
+              </div>
+            })
+          }
+          {/* <div
             className="search-option"
             onClick={() => handleSelectOption("Option 1")}
           >
@@ -53,8 +60,7 @@ const SearchInput = (props) => {
             onClick={() => handleSelectOption("Option 2")}
           >
             Option 2
-          </div>
-          {/* Add more search options as needed */}
+          </div> */}
         </div>
       )}
 

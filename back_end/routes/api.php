@@ -22,5 +22,10 @@ use App\Http\Controllers\AuthController;
 Route::group(["prefix" => "v0.0.1"], function (){
     Route::post('/login', [AuthController::class, "login"]);
     Route::post('/register', [AuthController::class, "register"]);
+    // Route::post('/booking_hotel', [AuthController::class, "bookingHotel"]);
 
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::post('/booking_hotel', [AuthController::class, "bookingHotel"]);
+    });
 });
+

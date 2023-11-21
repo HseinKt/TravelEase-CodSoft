@@ -80,5 +80,52 @@ class AuthController extends Controller
         ]);
     }
 
+    public function bookingHotel(Request $request)
+    {
+        $user = Auth::user();
+        
+        if ($user) 
+        {
+            if($request->departurePlace == "" || $request->departureTime == "" || $request->arrivalTime == "" || $request->adults == "" || $request->children == "" || $request->price == "")
+            {
+                return response()->json([
+                    'status' => 'please make sure all the data are filled in',
+                ]);
+            }
 
+            $hotelData = [
+                'departure_place' => $request->departurePlace,
+                'departure_time' => $request->departureTime,
+                'arrival_time' => $request->arrivalTime,
+                'adults' => $request->adults,
+                'children' => $request->children,
+                'price' => $request->price,
+            ];
+
+            $hotel = Hotel::create($hotelData);
+
+            if($hotel)
+            {
+                $user->hotel_id = $hotel->id;
+                $user->save();
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Hotel booked successfully'
+                ]);
+            }else 
+            {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Failed to book hotel.',
+                ]);
+            }
+        }
+        else 
+        {
+            return response()->json([
+                'status' => 'error 2',
+                'message' => 'Failed to book hotel.',
+            ]);
+        }
+    }
 }

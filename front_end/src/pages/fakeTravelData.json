@@ -1,0 +1,61 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "departure_airport": "Airport A",
+      "arrival_airport": "Airport B",
+      "departure_time": "2023-11-20",
+      "adults": 2,
+      "children": 1,
+      "price": 200.0,
+      "flight_type": "One-Way",
+      "round_trip_flight_id": null,
+      "multi_city_flight_id": null
+    },
+    {
+      "id": 2,
+      "departure_airport": "Airport B",
+      "arrival_airport": "Airport C",
+      "departure_time": "2023-11-21",
+      "adults": 1,
+      "children": 0,
+      "price": 150.0,
+      "flight_type": "Round-Trip",
+      "round_trip_flight_id": 1,
+      "multi_city_flight_id": null
+    },
+    {
+      "id": 3,
+      "departure_airport": "Airport C",
+      "arrival_airport": "Airport D",
+      "departure_time": "2023-11-22",
+      "adults": 2,
+      "children": 2,
+      "price": 300.0,
+      "flight_type": "Multi-City",
+      "round_trip_flight_id": null,
+      "multi_city_flight_id": 2
+    }
+  ],
+
+  "multi_city_flights" : [
+    {
+      "count": 0
+    }
+  ],
+
+  "round_trip_flights": [
+    {
+      "arrival_time": "2023-11-28"
+    },
+    {
+      "arrival_time": "2023-11-26"
+    },
+    {
+      "arrival_time": "2023-12-2"
+    },
+    {
+      "arrival_time": "2023-12-6"
+    }
+  ]
+}

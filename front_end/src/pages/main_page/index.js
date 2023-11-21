@@ -4,6 +4,7 @@ import NavBar from "../../components/nav_bar";
 import CarHire from "../car_hire";
 import Flights from "../flights";
 import Hotels from "../hotels";
+import image from "../../components/images/travelImage.jpg";
 
 const MainPage = () => {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -32,6 +33,10 @@ const MainPage = () => {
             <NavBar item1={'FLIGHTS'} item2={'HOTELS'} item3={'CAR-HIRE'} handleClick={handleClick}/>
 
             {renderSelectedComponent()}
+
+            <div className="mainImage">
+                <img src={image} alt="img" className="Image"/>
+            </div>
         </>
      );
 }
