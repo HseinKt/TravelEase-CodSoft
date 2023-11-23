@@ -29,6 +29,8 @@ const Hotels = () => {
         console.log(formData);
     };
 
+    
+
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">

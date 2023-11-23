@@ -40,22 +40,88 @@
 
   "multi_city_flights" : [
     {
+      "id": 2,
       "count": 0
     }
   ],
 
   "round_trip_flights": [
     {
+      "id": 1,
       "arrival_time": "2023-11-28"
     },
     {
+      "id": 2,
       "arrival_time": "2023-11-26"
     },
     {
-      "arrival_time": "2023-12-2"
+      "id": 3,
+      "arrival_time": "2023-12-02"
     },
     {
-      "arrival_time": "2023-12-6"
+      "id": 4,
+      "arrival_time": "2023-12-06"
     }
-  ]
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "departure_place": "City A",
+      "departure_time": "2023-11-20",
+      "arrival_time": "2023-11-22",
+      "pick_up_time": "08:30:00",
+      "drop_off_time": "17:00:00",
+      "price": 300.0,
+      "hotel_id": 1
+    },
+    {
+      "id": 2,
+      "departure_place": "City B",
+      "departure_time": "2023-11-21",
+      "arrival_time": "2023-11-23",
+      "pick_up_time": "10:00:00",
+      "drop_off_time": "18:30:00",
+      "price": 250.0,
+      "hotel_id": 2
+    },
+    {
+      "id": 3,
+      "departure_place": "City C",
+      "departure_time": "2023-11-25",
+      "arrival_time": "2023-11-27",
+      "pick_up_time": "11:30:00",
+      "drop_off_time": "19:00:00",
+      "price": 350.0,
+      "hotel_id": 3
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "departure_place": "City A",
+      "departure_time": "2023-11-20",
+      "arrival_time": "2023-11-22",
+      "adults": 2,
+      "children": 1,
+      "price": 500.0
+    },
+    {
+      "id": 2,
+      "departure_place": "City B",
+      "departure_time": "2023-11-21",
+      "arrival_time": "2023-11-23",
+      "adults": 1,
+      "children": 0,
+      "price": 400.0
+    },
+    {
+      "id": 3,
+      "departure_place": "City C",
+      "departure_time": "2023-11-25",
+      "arrival_time": "2023-11-27",
+      "adults": 2,
+      "children": 2,
+      "price": 600.0
+    }
+  ] 
 }
