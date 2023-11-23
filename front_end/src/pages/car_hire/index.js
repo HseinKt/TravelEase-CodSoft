@@ -34,9 +34,7 @@ const CarHire = () => {
     useEffect(() => {
         fetchFlightData()
         .then(data => {
-            console.log("data CAR hire:  ",data);
             setFlightData(data);
-            // console.log("flightData:  ",flightData);
         }) 
         .catch(error => console.error('Error fetching flight data 2 :', error));
     }, []);

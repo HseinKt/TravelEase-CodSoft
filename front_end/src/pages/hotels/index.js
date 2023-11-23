@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
+import { fetchFlightData } from "../flights/flightService";
 
 const Hotels = () => {
     const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const Hotels = () => {
         children: 0,
         price: 0,
     });
+
+    const [flightData, setFlightData] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,12 +32,20 @@ const Hotels = () => {
         console.log(formData);
     };
 
-    
+    useEffect(() => {
+        fetchFlightData()
+        .then(data => {
+            setFlightData(data);
+        })
+        .catch(error => console.error('Error fetching flight data 2 :', error));
+    });
+
+    const departure_place = flightData?.hotels?.map((hotel) => hotel.departure_place) || [];
 
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
-                <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace"/>
+                <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace" option={departure_place}/>
 
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                 
