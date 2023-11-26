@@ -1,6 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const MulticityDetailsPage = (props) => {
+    const navigate = useNavigate();
     const location = useLocation();
     const formData = location.state;
     
@@ -20,7 +21,7 @@ const MulticityDetailsPage = (props) => {
         <p>adults: {formData.adults}</p>
         <p>children: {formData.children}</p>
         <p>Price: ${formData.price}</p>
-        <button>back</button>
+        <button onClick={() => navigate(-1)}>Back</button>
       </div>
     );
   };

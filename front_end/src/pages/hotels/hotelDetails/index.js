@@ -1,6 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HotelDetailsPage = (props) => {
+    const navigate = useNavigate();
     const location = useLocation();
     const formData = location.state;
     
@@ -13,6 +14,7 @@ const HotelDetailsPage = (props) => {
         <p>adults: {formData.adults}</p>
         <p>children: {formData.children}</p>
         <p>Price: ${formData.price}</p>
+        <button onClick={() => navigate(-1)}>Back</button>
       </div>
     );
   };

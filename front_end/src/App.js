@@ -7,6 +7,7 @@ import HotelDetailsPage from "./pages/hotels/hotelDetails";
 import OneWayDetailsPage from "./components/one_way/one_way_details";
 import RoundTripDetailsPage from "./components/round_trip/round_trip_details";
 import MulticityDetailsPage from "./components/multi_city/multi_city_details";
+import CarHire from "./pages/car_hire";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={ <LoginPage/> } />
         <Route path="/register" element={ <RegisterPage/> } />
         <Route path="/" element={ <MainPage/> } />
+        <Route path="/carHire" element={ <CarHire/> } />
         <Route path="/carDetails" element={ <CarDetailsPage/> } />
         <Route path="/hotelDetails" element={ <HotelDetailsPage/> } />
         <Route path="/OneWayDetails" element={ <OneWayDetailsPage/> } />
