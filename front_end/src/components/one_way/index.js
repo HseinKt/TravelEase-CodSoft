@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
+import { useNavigate } from "react-router-dom";
 
 const OneWay = (props) => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         departurePlace: "",
         arrivalPlace: "",
@@ -25,6 +27,7 @@ const OneWay = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        navigate('/OneWayDetails', {state: formData})
         console.log(formData);
     };
 
@@ -35,10 +38,10 @@ const OneWay = (props) => {
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
-                <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
-                
                 <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace" option={arrivalAirports}/>
 
+                <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
+                
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                                 
                 <NumberInput id={"adults"} label={"Adults"} value={formData.adults} handleChange={handleChange}/>
