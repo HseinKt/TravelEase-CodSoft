@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
+import { useNavigate } from "react-router-dom";
 
 const MultiCity = (props) => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         departurePlace: "",
         arrivalPlace: "",
@@ -28,6 +30,7 @@ const MultiCity = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        navigate("MulticityDetails", {state: formData});
         console.log(formData);
     };
 
@@ -45,18 +48,18 @@ const MultiCity = (props) => {
                     </div>
                     
                     <div className="section">
-                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
-                    
                         <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace" option={arrivalAirports}/>
 
+                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
+                    
                         <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>                
                     </div>
                     
                     <div className="section">
-                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace2} handleChange={handleChange} fieldName="arrivalPlace2" option={departureAirports}/>
-                    
                         <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace2} handleChange={handleChange} fieldName="departurePlace2" option={arrivalAirports}/>
 
+                        <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace2} handleChange={handleChange} fieldName="arrivalPlace2" option={departureAirports}/>
+                    
                         <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime2} handleChange={handleChange}/>                
                     </div>
 
