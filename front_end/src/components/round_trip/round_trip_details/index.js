@@ -1,13 +1,14 @@
 import { useLocation } from "react-router-dom";
 
-const HotelDetailsPage = (props) => {
+const RoundTripDetailsPage = (props) => {
     const location = useLocation();
     const formData = location.state;
     
     return (
       <div className="details">
-        <h2>Hotel Details</h2>
+        <h2>Round-trip Flight Details</h2>
         <p>Departure Place: {formData.departurePlace}</p>
+        <p>Arrival Place: {formData.arrivalPlace}</p>
         <p>Departure Time: {formData.departureTime}</p>
         <p>Arrival Time: {formData.arrivalTime}</p>
         <p>adults: {formData.adults}</p>
@@ -17,4 +18,4 @@ const HotelDetailsPage = (props) => {
     );
   };
 
-export default HotelDetailsPage;
+export default RoundTripDetailsPage;

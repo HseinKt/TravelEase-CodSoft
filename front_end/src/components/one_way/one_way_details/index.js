@@ -6,14 +6,13 @@ const OneWayDetailsPage = (props) => {
     
     return (
       <div className="details">
-        <h2>Car Details</h2>
+        <h2>one-way Flight Details</h2>
         <p>Departure Place: {formData.departurePlace}</p>
         <p>Arrival Place: {formData.arrivalPlace}</p>
         <p>Departure Time: {formData.departureTime}</p>
         <p>adults: {formData.adults}</p>
         <p>children: {formData.children}</p>
         <p>Price: ${formData.price}</p>
-        {/* Add more details as needed */}
       </div>
     );
   };

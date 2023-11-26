@@ -5,6 +5,7 @@ import MainPage from "./pages/main_page";
 import CarDetailsPage from "./pages/car_hire/CarDetails";
 import HotelDetailsPage from "./pages/hotels/hotelDetails";
 import OneWayDetailsPage from "./components/one_way/one_way_details";
+import RoundTripDetailsPage from "./components/round_trip/round_trip_details";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/carDetails" element={ <CarDetailsPage/> } />
         <Route path="/hotelDetails" element={ <HotelDetailsPage/> } />
         <Route path="/OneWayDetails" element={ <OneWayDetailsPage/> } />
+        <Route path="/RoundTripDetails" element={ <RoundTripDetailsPage/> } />
 
       </Routes>
     </>

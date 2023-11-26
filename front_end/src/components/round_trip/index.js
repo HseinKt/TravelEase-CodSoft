@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
+import { useNavigate } from "react-router-dom";
 
 const RoundTrip = (props) => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         departurePlace: "",
         arrivalPlace: "",
@@ -26,22 +29,20 @@ const RoundTrip = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        navigate("/RoundTripDetails", {state: formData});
         console.log(formData);
-        console.log("props.flightData", props.flightData.flights);
     };
 
     const departureAirports = props.flightData?.flights?.map((flight) => flight.departure_airport) || [];
     const arrivalAirports = props.flightData?.flights?.map((flight) => flight.arrival_airport) || [];
 
-    // console.log("departureAirports: ", arrivalAirports);
-
     return (
         <div >
             <form onSubmit={handleSubmit} className="hotel-booking-form">
-                <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
-                
                 <SearchInput id={"departurePlace"} placeholder={"Going to"} value={formData.departurePlace} handleChange={handleChange} fieldName="departurePlace" option={arrivalAirports}/>
 
+                <SearchInput id={"arrivalPlace"} placeholder={"Leaving from"} value={formData.arrivalPlace} handleChange={handleChange} fieldName="arrivalPlace" option={departureAirports}/>
+                
                 <DateTime id={"departureTime"} label={"Departure Time"} value={formData.departureTime} handleChange={handleChange}/>
                 
                 <DateTime id={"arrivalTime"} label={"Arrival Time"} value={formData.arrivalTime} handleChange={handleChange}/>
