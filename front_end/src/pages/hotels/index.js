@@ -3,8 +3,10 @@ import SearchInput from "../../components/search_input";
 import DateTime from "../../components/date_time_input";
 import NumberInput from "../../components/number_input";
 import { fetchFlightData } from "../flights/flightService";
+import { useNavigate } from "react-router-dom";
 
 const Hotels = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         departurePlace: "",
         departureTime: "",
@@ -28,7 +30,7 @@ const Hotels = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // You can submit the form data to the server or perform other actions here
+        navigate('/hotelDetails', {state: formData})
         console.log(formData);
     };
 

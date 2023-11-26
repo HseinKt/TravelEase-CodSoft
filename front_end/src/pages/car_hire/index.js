@@ -4,12 +4,11 @@ import DateTime from "../../components/date_time_input";
 import TimeInput from "../../components/time_input";
 import { fetchFlightData } from "../flights/flightService";
 import { useNavigate } from "react-router-dom";
-import CarDetailsPage from "./CarDetails";
 
 const CarHire = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        departurePlace: "huu",
+        departurePlace: "",
         departureTime: "",
         arrivalTime: "",
         pick_up_time: "",
@@ -33,8 +32,6 @@ const CarHire = () => {
         console.log(formData);
         console.log("dd");
         navigate('/carDetails', {state: formData})
-        // <CarDetailsPage car={formData}/>
-        // console.log(formData);
     };
 
     useEffect(() => {
