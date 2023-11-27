@@ -12,7 +12,7 @@ const OneWay = (props) => {
         departureTime: "",
         adults: 1,
         children: 0,
-        price: 0,
+        price: 100,
     });
 
     const handleChange = (e) => {

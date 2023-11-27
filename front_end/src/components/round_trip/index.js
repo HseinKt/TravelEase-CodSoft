@@ -14,7 +14,7 @@ const RoundTrip = (props) => {
         arrivalTime: "",
         adults: 1,
         children: 0,
-        price: 0,
+        price: 100,
     });
 
     const handleChange = (e) => {
@@ -24,7 +24,7 @@ const RoundTrip = (props) => {
         [name]: value,
         });
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/RoundTripDetails", {state: formData});

@@ -13,7 +13,7 @@ const Hotels = () => {
         arrivalTime: "",
         adults: 1,
         children: 0,
-        price: 0,
+        price: 100,
     });
 
     const [flightData, setFlightData] = useState(null);

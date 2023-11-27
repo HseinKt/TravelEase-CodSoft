@@ -13,7 +13,7 @@ const CarHire = () => {
         arrivalTime: "",
         pick_up_time: "",
         drop_off_time: "",
-        price: 0,
+        price: 100,
     });
     const [flightData, setFlightData] = useState(null);
 
