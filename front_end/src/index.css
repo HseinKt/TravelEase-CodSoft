@@ -451,3 +451,16 @@ label {
   margin-bottom: 90px;
   margin-top: 20px;
 }
+
+/* Details */
+.details {
+  /* background-color: #b6afaf; */
+  display: flex;
+  flex-direction: column;
+}
+
+.details .header_container {
+  margin-bottom: 30px;
+}
+
+

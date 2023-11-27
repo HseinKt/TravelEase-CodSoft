@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import Header from "../../header";
 
 const MulticityDetailsPage = (props) => {
     const navigate = useNavigate();
@@ -7,6 +8,7 @@ const MulticityDetailsPage = (props) => {
     
     return (
       <div className="details">
+        <Header />
         <h2>Multi-city Flight Details</h2>
         <h3>** First FLight **</h3>
         <p>Departure Place: {formData.departurePlace}</p>
@@ -21,7 +23,7 @@ const MulticityDetailsPage = (props) => {
         <p>adults: {formData.adults}</p>
         <p>children: {formData.children}</p>
         <p>Price: ${formData.price}</p>
-        <button onClick={() => navigate(-1)}>Back</button>
+        <button onClick={() => navigate(-1)} className='btn'>Back</button>
       </div>
     );
   };
