@@ -26,8 +26,6 @@ const Hotels = () => {
         });
     };
 
-    console.log("date: " + formData.departureTime)
-
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate('/hotelDetails', {state: formData})

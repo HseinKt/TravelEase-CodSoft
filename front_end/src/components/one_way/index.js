@@ -23,8 +23,6 @@ const OneWay = (props) => {
         });
     };
 
-    console.log("date: " + formData.departureTime)
-
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate('/OneWayDetails', {state: formData})

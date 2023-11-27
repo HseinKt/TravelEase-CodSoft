@@ -25,8 +25,6 @@ const CarHire = () => {
         });
     };
 
-    console.log("date: " + formData.departureTime)
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);

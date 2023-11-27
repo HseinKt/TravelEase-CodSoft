@@ -15,19 +15,12 @@ const Flights = () => {
     }
 
     useEffect(() => {
-        // const token = localStorage.getItem("token");
-        // console.log("flight token : "+token);
-
         fetchFlightData()
         .then(data => {
-            console.log("data hsein:  ",data);
             setFlightData(data);
-            // console.log("flightData:  ",flightData);
         }) 
         .catch(error => console.error('Error fetching flight data 2 :', error));
     }, [selectedItem]);
-
-    // fetch('https://jsonplaceholder.typicode.com/users/1')
 
     const renderSelectedComponent = () => {
         switch (selectedItem) {

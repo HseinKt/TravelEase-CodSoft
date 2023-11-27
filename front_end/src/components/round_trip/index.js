@@ -24,9 +24,7 @@ const RoundTrip = (props) => {
         [name]: value,
         });
     };
-
-    console.log("date: " + formData.departureTime)
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/RoundTripDetails", {state: formData});

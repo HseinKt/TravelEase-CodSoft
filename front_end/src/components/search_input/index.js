@@ -49,18 +49,6 @@ const SearchInput = (props) => {
               </div>
             })
           }
-          {/* <div
-            className="search-option"
-            onClick={() => handleSelectOption("Option 1")}
-          >
-            Option 1
-          </div>
-          <div
-            className="search-option"
-            onClick={() => handleSelectOption("Option 2")}
-          >
-            Option 2
-          </div> */}
         </div>
       )}
 

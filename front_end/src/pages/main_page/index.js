@@ -42,7 +42,3 @@ const MainPage = () => {
 }
  
 export default MainPage;
-
-
-// const receiver_id = localStorage.getItem('user_id');
-//                 localStorage.setItem('token', response.data.authorisation.token);
