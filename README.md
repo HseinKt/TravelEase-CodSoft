@@ -8,6 +8,20 @@ Creating a travel website using React JS, Laravel PHP, and MySQL for DataBase
   <li style="color:#FFB155;">orange</li>
 </ul>
 
+## Wireframes:
+
+![signIn Register](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/de9dc47a-557e-4962-ab69-b8b0b5c7c4d6)
+
+![flight](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/391ab4a9-9934-4778-9e02-b1338b108164)
+
+![flight2](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/3bb4d1b9-0c8e-4997-a56b-2c7cf70a409c)
+
+![hotel car](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/2db66cb7-ecd7-4435-a4ca-ab6938f31143)
+
+## MySQL design:
+
+![travelwebsiteDatBase](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/e4e101a7-5507-4419-92ce-7f04ef4ca923)
+
 ## Implementation:
 
 ![register](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/d8746e78-6941-49eb-bc09-b7d10897fc6a)
@@ -26,6 +40,7 @@ Creating a travel website using React JS, Laravel PHP, and MySQL for DataBase
 
 ![details page](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/965c9565-bcc2-4d0d-8c5e-9e48b262009e)
 
-## MySQL design:
 
-![travelwebsiteDatBase](https://github.com/HseinKt/TravelEase-CodSoft/assets/120685276/e4e101a7-5507-4419-92ce-7f04ef4ca923)
+
+
+
